@@ -24,10 +24,9 @@
 
 <style lang="scss">
 	.face {
-		margin: 0 25px;
-
 		width: 26px;
 		height: 26px;
+		margin: 0 25px;
 
 		background-repeat: no-repeat;
 		background-position: center center;
