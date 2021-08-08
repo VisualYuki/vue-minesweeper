@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Number :number="secondCount" />
+		<Number :number="flagRemainCount" />
 	</div>
 </template>
 
@@ -8,15 +8,16 @@
 	import Vue from "vue";
 
 	import Number from "@/components/header/Number.vue";
-	import {mapState} from "vuex";
+	import {mapGetters} from "vuex";
 
 	export default Vue.extend({
 		components: {
 			Number
 		},
 		computed: {
-			...mapState("timer", ["secondCount"])
+			...mapGetters("flagCount", ["flagRemainCount"])
 		}
 	});
 </script>
+
 <style lang="scss"></style>

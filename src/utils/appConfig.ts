@@ -1,9 +1,10 @@
 export const appConfig: any = {
+	startGameLevel: "beginner",
 	levels: {
 		beginner: {
-			widthCellCount: 4,
-			heightCellCount: 4,
-			bombCount: 4
+			widthCellCount: 3,
+			heightCellCount: 3,
+			bombCount: 1
 		},
 		middle: {
 			widthCellCount: 9,

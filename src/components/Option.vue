@@ -16,16 +16,16 @@
 </template>
 
 <script lang="ts">
-	import Vue from 'vue';
+	import Vue from "vue";
 
-	import {appConfig} from '@/utils/appConfig';
+	import {appConfig} from "@/utils/appConfig";
 
 	export default Vue.extend({
 		data() {
 			return {
 				gameTextLevels: appConfig.getLevels(),
 				isClickedGameOption: false,
-				inputGameLevels: 'beginner'
+				inputGameLevels: appConfig.startGameLevel
 			};
 		},
 		methods: {
@@ -33,10 +33,16 @@
 				this.isClickedGameOption = !this.isClickedGameOption;
 			}
 		},
+		watch: {
+			inputGameLevels(newValue: string) {
+				this.$store.commit("game/setGameLevel", newValue);
+				this.$store.dispatch("game/startNewGame", newValue);
+			}
+		},
 		mounted() {
-			document.addEventListener('click', (e: Event) => {
+			document.addEventListener("click", (e: Event) => {
 				let isDropdown: Function = (target: HTMLElement): boolean => {
-					return target === this.$refs.option__dropdown || target.closest('.option__dropdown') ? true : false;
+					return target === this.$refs.option__dropdown || target.closest(".option__dropdown") ? true : false;
 				};
 
 				if (e.target !== this.$refs.option__link && !isDropdown(e.target)) {
@@ -55,9 +61,9 @@
 		position: relative;
 
 		&__link {
-			z-index: 1;
-
+			width: max-content;
 			padding: 5px;
+			z-index: 2;
 
 			border: outset 1px transparent;
 
@@ -72,6 +78,7 @@
 			position: absolute;
 			left: 0;
 			top: 0;
+			z-index: 0;
 
 			width: max-content;
 			padding: 5px;
