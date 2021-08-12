@@ -33,19 +33,19 @@
 		cursor: pointer;
 
 		&_default {
-			background: url("/face_smile.png");
+			background: url("../../assets/face_smile.png");
 		}
 
 		&_click-cell {
-			background: url("/face_worry.png");
+			background: url("../../assets/face_worry.png");
 		}
 
 		&_loss {
-			background: url("/face_dead.png");
+			background: url("../../assets/face_dead.png");
 		}
 
 		&_win {
-			background: url("/face_boss.png");
+			background: url("../../assets/face_boss.png");
 		}
 	}
 </style>

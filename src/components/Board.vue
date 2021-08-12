@@ -76,7 +76,7 @@
 	});
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 	.board {
 		width: max-content;
 		margin: 0 auto;
@@ -96,64 +96,64 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 
-		&_question {
-			background-image: url("/cell_question.png");
-		}
+		//&_question {
+		//	background-image: url("~@/assets/cell_question.png");
+		//}
 
 		&_empty {
-			background-image: url("/cell_empty.png");
+			background-image: url("../assets/cell_empty.png");
 		}
 
 		&_bomb {
-			background-image: url("/bomb.png");
+			background-image: url("../assets/bomb.png");
 		}
 
 		&_bomb-trigger {
-			background-image: url("/bomb_red-back.png");
+			background-image: url("../assets/bomb_red-back.png");
 		}
 
 		&[data-hint="1"] {
-			background-image: url("/cell_1.png");
+			background-image: url("../assets/cell_1.png");
 		}
 
 		&[data-hint="2"] {
-			background-image: url("/cell_2.png");
+			background-image: url("../assets/cell_2.png");
 		}
 
 		&[data-hint="3"] {
-			background-image: url("/cell_3.png");
+			background-image: url("../assets/cell_3.png");
 		}
 
 		&[data-hint="4"] {
-			background-image: url("/cell_4.png");
+			background-image: url("../assets/cell_4.png");
 		}
 
 		&[data-hint="5"] {
-			background-image: url("/cell_5.png");
+			background-image: url("../assets/cell_5.png");
 		}
 
 		&[data-hint="6"] {
-			background-image: url("/cell_6.png");
+			background-image: url("../assets/cell_6.png");
 		}
 
 		&[data-hint="7"] {
-			background-image: url("/cell_7.png");
+			background-image: url("../assets/cell_7.png");
 		}
 
 		&[data-hint="8"] {
-			background-image: url("/cell_8.png");
+			background-image: url("../assets/cell_8.png");
 		}
 
 		&_closed {
-			background-image: url("/cell_closed.png") !important;
+			background-image: url("../assets/cell_closed.png") !important;
 		}
 
 		&_flag {
-			background-image: url("/flag.png") !important;
+			background-image: url("../assets/flag.png") !important;
 		}
 
 		&_defused-bomb {
-			background-image: url("/bomb_red-lines.png") !important;
+			background-image: url("../assets/bomb_red-lines.png") !important;
 		}
 	}
 </style>
