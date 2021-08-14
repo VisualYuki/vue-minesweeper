@@ -10,7 +10,7 @@ module.exports = {
 			}
 		}
 	},
-	//publicPath: "./",
+	publicPath: "./",
 	css: {
 		loaderOptions: {
 			sass: {
