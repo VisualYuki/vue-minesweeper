@@ -1,4 +1,4 @@
-# my-vue-minesweeper
+# vue-minesweeper
 
 ![alt](https://visualyuki.github.io/vue-minesweeper/docs/index.png)
 
