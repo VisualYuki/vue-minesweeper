@@ -11,7 +11,7 @@ module.exports = {
 			}
 		}
 	},
-	publicPath: "./",
+	publicPath: process.env.NODE_ENV === "production" ? "/vue-minesweeper/dist/" : "/",
 	css: {
 		loaderOptions: {
 			sass: {
